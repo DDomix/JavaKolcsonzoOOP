@@ -1,6 +1,6 @@
 package hu.petrik.kolcsonzooop;
 
-public class DVD implements kolcsonozheto{
+public class DVD implements kolcsonozheto,Comparable<DVD>{
 
     private String cim;
     private int hossz;
@@ -26,5 +26,10 @@ public class DVD implements kolcsonozheto{
     @Override
     public int meddigkolcsonozheto() {
         return 0;
+    }
+
+    @Override
+    public int compareTo(DVD masikDVD) {
+        return this.hossz - masikDVD.hossz;
     }
 }
